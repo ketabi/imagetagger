@@ -13,6 +13,7 @@ class Image(models.Model):
         'ImageSet', on_delete=models.CASCADE, related_name='images')
     name = models.CharField(max_length=100)
     filename = models.CharField(max_length=100, unique=True)
+    patientname = models.CharField(max_length=100)
     time = models.DateTimeField(auto_now_add=True)
     checksum = models.BinaryField()
     width = models.IntegerField(default=800)

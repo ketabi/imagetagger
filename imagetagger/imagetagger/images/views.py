@@ -200,6 +200,7 @@ def upload_image(request, imageset_id):
                                     new_image = Image(name=filename,
                                                       image_set=imageset,
                                                       filename=img_fname,
+                                                      patientname='sample',
                                                       checksum=fchecksum,
                                                       width=width,
                                                       height=height
@@ -232,6 +233,7 @@ def upload_image(request, imageset_id):
                     image = Image(
                         name=f.name,
                         image_set=imageset,
+                        patientname='sample',
                         filename=fname,
                         checksum=fchecksum)
                     with open(image.path(), 'wb') as out:
